@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 driver.get("https://demoqa.com/select-menu")
 
 # Select dropdown with selects
-select_value_dropdown = Select(driver.find_element(By.ID, "oldSelectMenu"));
+select_value_dropdown = Select(driver.find_element(By.ID, "oldSelectMenu"))
 # By value
 select_value_dropdown.select_by_value("5")
 time.sleep(3)
