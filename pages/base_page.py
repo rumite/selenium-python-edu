@@ -20,3 +20,6 @@ class BasePage:
 
     def elements_are_present(self, locator, timeout=5):
         return wait(self.driver, timeout).until(EC.presence_of_all_elements_located(locator))
+
+    def go_to_element(self, locator):
+        return self.driver.execute_script("arguments[0].scrollIntoView(true);", locator)
